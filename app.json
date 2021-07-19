@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "fruit-hub",
-    "slug": "fruit-hub",
+    "name": "orderit",
+    "slug": "orderit",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",

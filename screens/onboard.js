@@ -1,30 +1,34 @@
 import React from 'react';
-import {View, StyleSheet, Text, Image, TouchableOpacity} from 'react-native';
+import {View, StyleSheet, Text, Image, TouchableOpacity, TextInput,Pressable } from 'react-native';
 
 const Onboard = () => {
     return (
         <View style={styles.container}>
            <View style={styles.banner}>
                <Image source={
-                   require("../assets/images/onboard-img.png")
+                   require("../assets/logos/logo.png")
                }
                style={styles.image}
                />
            </View>
            <View style={styles.highlight}>
                <View>
-                   <Text style={styles.headerText}>Get the Freshest Fruit Salad Combo</Text>
+                   <Text style={styles.headerText}>Welcome to CopyGen</Text>
                </View>
                <View style={styles.highlightTextContainer}>
                    <Text style={styles.highlightText}>We deliver the freshest fruit salad combo. </Text>
                    <Text style={styles.highlightText}>Order from combo today</Text>
                </View>
-               <View style={styles.buttonContainer}>
-                   <TouchableOpacity style={styles.button}>
-                       <Text style={styles.buttonText}>Let's continue</Text>
-                   </TouchableOpacity>
-               </View>
+           </View>
+           <View style={styles.formContainer}>
+               <TextInput style={styles.input} placeholder="email"/>
+               <TextInput style={styles.input} secureTextEntry={true}  placeholder="password"/>
 
+           </View>
+           <View>
+           <Pressable style={styles.button} >
+               <Text style={styles.buttonText}>Log in</Text>
+           </Pressable>
            </View>
         </View>
     );
@@ -33,23 +37,26 @@ const Onboard = () => {
 const styles = StyleSheet.create({
     container: {
         height: '100%',
-        backgroundColor: 'white'
+        backgroundColor: 'white',
+        padding: 20
     },
     banner: {
-        backgroundColor: "#FFA451",
         alignItems: 'center',
-        height: '60%',
+        height: '30%',
         justifyContent:'space-around',
+
     },
     image: {
-        marginTop: 40
+        width: 90,
+        height:90
     },
     highlight: {
-        padding: 25
+        alignItems:'center'
     },
     headerText: {
         fontWeight: 'bold',
-        fontSize: 18
+        fontSize: 25,
+        color: "#424242"
     },
     highlightTextContainer: {
       marginTop: 20
@@ -58,22 +65,35 @@ const styles = StyleSheet.create({
         fontWeight: 'normal',
         fontSize: 18,
         color: '#5D577E',
+        textAlign:"center"
     },
-    buttonContainer: {
-        marginTop: 5,
+
+    formContainer: {
+        marginTop: 80
+    },
+    input: {
+       borderRadius: 5,
+       backgroundColor: '#f0f0f0',
+       padding: 15,
+       fontSize: 20,
+       marginVertical: 10
+
     },
     button: {
-        backgroundColor: "#FFA451",
-        color: 'white',
-        padding: 20,
         alignItems: 'center',
-        borderRadius: 10,
-        marginTop: "15%"
-    },
-    buttonText: {
+        justifyContent: 'center',
+        padding: 20,
+        borderRadius: 4,
+        backgroundColor: '#46a6fa',
+        marginVertical: 40
+      },
+      buttonText: {
+        fontSize: 18,
+        lineHeight: 21,
+        fontWeight: 'bold',
+        letterSpacing: 0.25,
         color: 'white',
-        fontSize: 20
-    }
+      },
     
 });
 export default Onboard;
