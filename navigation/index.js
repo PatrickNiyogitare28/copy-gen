@@ -2,7 +2,7 @@ import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import Onboard from '../screens/onboard';
 import Configuration from '../screens/configuration';
-// import {} from 'react-native-ele'
+import Invoice from '../screens/invoice';
 
 const Stack = createStackNavigator();
 
@@ -18,6 +18,25 @@ function MyStack() {
        component={Configuration}
        options={{
          title:'Configure',
+         headerStyle: {
+          elevation: 0,
+         },
+         headerTitleStyle: {
+          fontWeight: 'normal',
+
+        },
+        headerTitleAlign: 'center',
+        headerBackTitleVisible: true,
+        headerBackTitle: 'Back',
+        headerBackTitleStyle: {
+          color: '#BFBFBF'
+        }
+         }}/>
+       <Stack.Screen 
+       name="invoice"
+       component={Invoice}
+       options={{
+         title:'Create Invoice',
          headerStyle: {
           elevation: 0,
          },
