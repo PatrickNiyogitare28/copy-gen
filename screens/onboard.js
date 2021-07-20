@@ -1,7 +1,7 @@
 import React from 'react';
 import {View, StyleSheet, Text, Image, TouchableOpacity, TextInput,Pressable } from 'react-native';
 
-const Onboard = () => {
+const Onboard = ({navigation}) => {
     return (
         <View style={styles.container}>
            <View style={styles.banner}>
@@ -26,8 +26,10 @@ const Onboard = () => {
 
            </View>
            <View>
-           <Pressable style={styles.button} >
-               <Text style={styles.buttonText}>Log in</Text>
+           <Pressable style={styles.button} 
+            onPress = {() => navigation.navigate("configuration")} >
+               <Text style={styles.buttonText}
+               >Log in</Text>
            </Pressable>
            </View>
         </View>
