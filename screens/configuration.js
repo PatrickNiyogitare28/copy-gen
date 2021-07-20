@@ -3,7 +3,7 @@ import {View, Text, StyleSheet, ImageBackground,TextInput, Image,Pressable} from
 import {Icon} from 'react-native-elements';
 import SelectInput from 'react-native-select-input-ios'
 
-const Configuration = () => {
+const Configuration = ({navigation}) => {
   const options = [
       { value: 0,label: 'Binding' },
       { value: 1,label: 'Basic' },
@@ -69,9 +69,13 @@ const Configuration = () => {
            </View>
            <View>
            <Pressable style={styles.button} 
-            onPress = {() => navigation.navigate("configuration")} >
+            onPress = {() => navigation.navigate("invoice")} >
                <Text style={styles.buttonText}
                >Continue</Text>
+               <Icon 
+                  name="east"
+                  color="#ffff"
+               />
            </Pressable>
            </View>
       </View>
@@ -199,7 +203,9 @@ const styles = StyleSheet.create({
         padding: 20,
         borderRadius: 4,
         backgroundColor: '#46a6fa',
-        marginVertical: 20
+        marginVertical: 20,
+        display:'flex',
+        flexDirection:'row'
       },
       buttonText: {
         fontSize: 18,
@@ -207,6 +213,7 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         letterSpacing: 0.25,
         color: 'white',
+        paddingRight: 5
       },
     
    
