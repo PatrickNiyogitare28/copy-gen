@@ -5,7 +5,7 @@ import InvoiceItem from '../components/invoiceItem';
 import Delivery from '../components/delivery';
 import InvoiceAttachment from '../components/invoiceAttachment';
 
-const Invoice = () => {
+const Invoice = ({navigation}) => {
   const items = [
       {
           id: "ueuedk",
@@ -68,7 +68,7 @@ const Invoice = () => {
           <InvoiceAttachment/>
           <View>
            <Pressable style={styles.button} 
-            onPress = {() => navigation.navigate("invoice")} >
+            onPress = {() => navigation.navigate("receipt")} >
                <Text style={styles.buttonText}
                >Next Step</Text>
                <Icon 
