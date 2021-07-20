@@ -71,7 +71,7 @@ const Configuration = () => {
            <Pressable style={styles.button} 
             onPress = {() => navigation.navigate("configuration")} >
                <Text style={styles.buttonText}
-               >Log in</Text>
+               >Continue</Text>
            </Pressable>
            </View>
       </View>
@@ -147,7 +147,7 @@ const styles = StyleSheet.create({
         width:'47%',
         display:'flex',
         flexDirection: 'row',
-        padding: 15,
+        padding: 10,
         borderRadius: 10,
         borderWidth: 3,
         borderColor: '#46a6fa',
@@ -158,7 +158,7 @@ const styles = StyleSheet.create({
         width:'47%',
         display:'flex',
         flexDirection: 'row',
-        padding: 15,
+        padding: 10,
         borderRadius: 10,
         borderWidth: 3,
         borderColor: 'grey',
@@ -199,7 +199,7 @@ const styles = StyleSheet.create({
         padding: 20,
         borderRadius: 4,
         backgroundColor: '#46a6fa',
-        marginVertical: 10
+        marginVertical: 20
       },
       buttonText: {
         fontSize: 18,
