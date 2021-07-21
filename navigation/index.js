@@ -6,32 +6,14 @@ import Invoice from '../screens/invoice';
 import OrderReceipt from '../screens/receipt';
 import InvoicesList from '../screens/invoicesList';
 import Profile from '../screens/profile';
+import Preview from '../screens/preview';
 
 const Stack = createStackNavigator();
 
 function MyStack() {
   return (
     <Stack.Navigator>
-       <Stack.Screen 
-       name="profile"
-       component={Profile}
-       options={{
-         title:'Profile',
-         headerStyle: {
-          elevation: 0,
-         },
-         headerTitleStyle: {
-          fontWeight: 'normal',
-
-        },
-        headerTitleAlign: 'center',
-        headerBackTitleVisible: true,
-        headerBackTitle: 'Back',
-        headerBackTitleStyle: {
-          color: '#BFBFBF'
-        }
-         }}/>
-
+      
       <Stack.Screen 
         name="home" 
         component={Onboard} 
@@ -55,6 +37,8 @@ function MyStack() {
           color: '#BFBFBF'
         }
          }}/>
+
+
        <Stack.Screen 
        name="invoice"
        component={Invoice}
@@ -74,6 +58,8 @@ function MyStack() {
           color: '#BFBFBF'
         }
          }}/>
+
+
        <Stack.Screen 
        name="receipt"
        component={OrderReceipt}
@@ -93,6 +79,8 @@ function MyStack() {
           color: '#BFBFBF'
         }
          }}/>
+
+
       <Stack.Screen 
        name="invoicesList"
        component={InvoicesList}
@@ -112,6 +100,48 @@ function MyStack() {
           color: '#BFBFBF'
         }
          }}/>
+
+      <Stack.Screen 
+       name="profile"
+       component={Profile}
+       options={{
+         title:'Profile',
+         headerStyle: {
+          elevation: 0,
+         },
+         headerTitleStyle: {
+          fontWeight: 'normal',
+
+        },
+        headerTitleAlign: 'center',
+        headerBackTitleVisible: true,
+        headerBackTitle: 'Back',
+        headerBackTitleStyle: {
+          color: '#BFBFBF'
+        }
+         }}/>
+
+       <Stack.Screen 
+       name="preview"
+       component={Preview}
+       options={{
+         title:'3D Preview',
+         headerStyle: {
+          elevation: 0,
+         },
+         headerTitleStyle: {
+          fontWeight: 'normal',
+
+        },
+        headerTitleAlign: 'center',
+        headerBackTitleVisible: true,
+        headerBackTitle: 'Back',
+        headerBackTitleStyle: {
+          color: '#BFBFBF'
+        }
+         }}/>
+     
+     
     </Stack.Navigator>
       
   );

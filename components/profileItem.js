@@ -4,7 +4,6 @@ import {Icon} from 'react-native-elements';
 
 const ProfileItem = ({item}) => {
     const {name, icon, color , count} = item;
-    console.log("Hello "+name+" "+icon+" "+color+" "+count);
 
     return (
       <TouchableOpacity style={styles.container}>
@@ -24,7 +23,7 @@ const ProfileItem = ({item}) => {
 
 const styles = StyleSheet.create({
   container: {
-      padding: 10,
+      padding: 15,
       borderBottomWidth: 1,
       borderBottomColor: '#F0F0F0C9',
       display: 'flex',

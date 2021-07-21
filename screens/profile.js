@@ -74,13 +74,13 @@ const Profile = ({navigation}) => {
 
         <View style={styles.buttonsWrapper}>
         <Pressable style={styles.button1} 
-            onPress = {() => navigation.navigate("profile")} >
+            onPress = {() => navigation.navigate("preview")} >
                <Text style={styles.buttonText1}
                >Add Client</Text>
               
        </Pressable>
         <Pressable style={styles.button} 
-            onPress = {() => navigation.navigate("profile")} >
+            onPress = {() => navigation.navigate("preview")} >
                <Text style={styles.buttonText}
                >Create Invoice</Text>
               
@@ -132,7 +132,6 @@ const styles = StyleSheet.create({
         borderRadius: 4,
         borderColor: '#46a6fa',
         borderWidth: 2,
-        marginTop: 30,
         display:'flex',
         flexDirection:'row'
       },
