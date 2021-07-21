@@ -31,7 +31,7 @@ const Preview = ({navigation}) => {
            </View>
 
            <Pressable style={styles.button} 
-            onPress = {() => navigation.navigate("invoice")} >
+            onPress = {() => navigation.navigate("clients")} >
                <Text style={styles.buttonText}
                >Continue</Text>
                <Icon 

@@ -7,6 +7,8 @@ import OrderReceipt from '../screens/receipt';
 import InvoicesList from '../screens/invoicesList';
 import Profile from '../screens/profile';
 import Preview from '../screens/preview';
+import Clients from '../screens/clients';
+
 
 const Stack = createStackNavigator();
 
@@ -126,6 +128,26 @@ function MyStack() {
        component={Preview}
        options={{
          title:'3D Preview',
+         headerStyle: {
+          elevation: 0,
+         },
+         headerTitleStyle: {
+          fontWeight: 'normal',
+
+        },
+        headerTitleAlign: 'center',
+        headerBackTitleVisible: true,
+        headerBackTitle: 'Back',
+        headerBackTitleStyle: {
+          color: '#BFBFBF'
+        }
+         }}/>
+
+      <Stack.Screen 
+       name="clients"
+       component={Clients}
+       options={{
+         title:'Clients',
          headerStyle: {
           elevation: 0,
          },

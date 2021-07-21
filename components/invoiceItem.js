@@ -38,12 +38,10 @@ const styles = StyleSheet.create({
     leftWrapper: {
         display: 'flex',
         flexDirection:'row',
-        // justifyContent: 'space-between',
     },
     rightWrapper: {
         display: 'flex',
         flexDirection:'column',
-        // justifyContent: 'space-between',
     },
     name: {
         fontSize: 15,
