@@ -5,17 +5,18 @@ import Configuration from '../screens/configuration';
 import Invoice from '../screens/invoice';
 import OrderReceipt from '../screens/receipt';
 import InvoicesList from '../screens/invoicesList';
+import Profile from '../screens/profile';
 
 const Stack = createStackNavigator();
 
 function MyStack() {
   return (
     <Stack.Navigator>
-          <Stack.Screen 
-       name="invoicesList"
-       component={InvoicesList}
+       <Stack.Screen 
+       name="profile"
+       component={Profile}
        options={{
-         title:'Invoices',
+         title:'Profile',
          headerStyle: {
           elevation: 0,
          },
@@ -30,6 +31,7 @@ function MyStack() {
           color: '#BFBFBF'
         }
          }}/>
+
       <Stack.Screen 
         name="home" 
         component={Onboard} 
@@ -77,6 +79,25 @@ function MyStack() {
        component={OrderReceipt}
        options={{
          title:'Order Receipt',
+         headerStyle: {
+          elevation: 0,
+         },
+         headerTitleStyle: {
+          fontWeight: 'normal',
+
+        },
+        headerTitleAlign: 'center',
+        headerBackTitleVisible: true,
+        headerBackTitle: 'Back',
+        headerBackTitleStyle: {
+          color: '#BFBFBF'
+        }
+         }}/>
+      <Stack.Screen 
+       name="invoicesList"
+       component={InvoicesList}
+       options={{
+         title:'Invoices',
          headerStyle: {
           elevation: 0,
          },

@@ -4,7 +4,7 @@ import InvoiceCard from '../components/invoiceCard';
 import {Icon} from 'react-native-elements';
 
 
-const InvoicesList  = () => {
+const InvoicesList  = ({navigation}) => {
     const invoices = [
         {
             id: "20056",
@@ -57,7 +57,7 @@ const InvoicesList  = () => {
           />
            <View>
            <Pressable style={styles.button} 
-            onPress = {() => navigation.navigate("receipt")} >
+            onPress = {() => navigation.navigate("profile")} >
                <Text style={styles.buttonText}
                >Add Client</Text>
                <Icon 
