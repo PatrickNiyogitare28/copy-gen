@@ -8,13 +8,35 @@ import InvoicesList from '../screens/invoicesList';
 import Profile from '../screens/profile';
 import Preview from '../screens/preview';
 import Clients from '../screens/clients';
+import DeliveryStatus from '../screens/deliveryStatus';
 
 
 const Stack = createStackNavigator();
 
-function MyStack() {
+function AppStack() {
   return (
     <Stack.Navigator>
+
+      <Stack.Screen 
+       name="receipt"
+       component={OrderReceipt}
+       options={{
+         title:'Order Receipt',
+         headerStyle: {
+          elevation: 0,
+         },
+         headerTitleStyle: {
+          fontWeight: 'normal',
+
+        },
+        headerTitleAlign: 'center',
+        headerBackTitleVisible: true,
+        headerBackTitle: 'Back',
+        headerBackTitleStyle: {
+          color: '#BFBFBF'
+        }
+         }}/>
+
       
       <Stack.Screen 
         name="home" 
@@ -62,26 +84,7 @@ function MyStack() {
          }}/>
 
 
-       <Stack.Screen 
-       name="receipt"
-       component={OrderReceipt}
-       options={{
-         title:'Order Receipt',
-         headerStyle: {
-          elevation: 0,
-         },
-         headerTitleStyle: {
-          fontWeight: 'normal',
-
-        },
-        headerTitleAlign: 'center',
-        headerBackTitleVisible: true,
-        headerBackTitle: 'Back',
-        headerBackTitleStyle: {
-          color: '#BFBFBF'
-        }
-         }}/>
-
+       
 
       <Stack.Screen 
        name="invoicesList"
@@ -163,6 +166,25 @@ function MyStack() {
         }
          }}/>
      
+       <Stack.Screen 
+       name="deliveryStatus"
+       component={DeliveryStatus}
+       options={{
+         title:'Delivery Status',
+         headerStyle: {
+          elevation: 0,
+         },
+         headerTitleStyle: {
+          fontWeight: 'normal',
+
+        },
+        headerTitleAlign: 'center',
+        headerBackTitleVisible: true,
+        headerBackTitle: 'Back',
+        headerBackTitleStyle: {
+          color: '#BFBFBF'
+        }
+         }}/> 
      
     </Stack.Navigator>
       
@@ -170,4 +192,4 @@ function MyStack() {
   
 }
 
-export default MyStack;
+export default AppStack;

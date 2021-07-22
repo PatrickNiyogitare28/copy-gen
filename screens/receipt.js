@@ -1,5 +1,7 @@
 import React from 'react';
 import {View, Text, StyleSheet,Image,Pressable} from 'react-native';
+import Barcode from "react-native-barcode-builder";
+
 import {Icon} from 'react-native-elements';
 
 
@@ -55,10 +57,16 @@ const OrderReceipt = ({navigation}) => {
                   <Text style={styles.totalRightItemText}>$ 623</Text>
               </View>
               </View>
+              <View>
+              <Text style={styles.barcode} >
+                <Barcode value="avalue to decode" format="CODE128" />;
+                </Text>
+              </View>
+            
              
            </View>
            <View>
-
+                {/* <Barcode value="Hello World" format="CODE128" />; */}
            </View>
            <View style={styles.buttonsContainer}>
            <Pressable style={styles.saveButton} >
@@ -88,7 +96,7 @@ const styles = StyleSheet.create({
     height: '100%',
   },
   receiptCard: {
-      height: "85%",
+      height: "90%",
       backgroundColor: 'white',
       elevation: 2,
       borderRadius: 5
@@ -149,6 +157,11 @@ const styles = StyleSheet.create({
     borderBottomColor: '#dbdbdb',
 
   },
+  barcode: {
+    width: '80%',
+    justifyContent: 'space-around',
+    alignItems:'center'
+  },
   buttonsContainer: {
       display: 'flex',
       flexDirection:'row',
@@ -160,7 +173,7 @@ const styles = StyleSheet.create({
     padding: 20,
     borderRadius: 4,
     backgroundColor: '#8638E0C4',
-    marginVertical: 50,
+    marginTop: 20,
     display:'flex',
     flexDirection:'row',
     width: "48%"
@@ -171,7 +184,7 @@ const styles = StyleSheet.create({
     padding: 20,
     borderRadius: 4,
     backgroundColor: '#46a6fa',
-    marginVertical: 50,
+    marginTop: 20,
     display:'flex',
     flexDirection:'row',
     width: "48%"

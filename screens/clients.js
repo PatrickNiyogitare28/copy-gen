@@ -8,43 +8,43 @@ import ClientCard from '../components/clientCard';
 const Clients = ({navigation}) => {
     const clients = [
         {
-            id: 1,
+            id: "1",
             name: "Joon doe",
             email: 'john@gmail.com'
 
         },
         {
-            id: 2,
+            id: '2',
             name: "Eric Bonner",
             email: 'ericbonner@gmail.com'
 
         },
         {
-            id: 3,
+            id: '3',
             name: "Luc Mike",
             email: 'lucmi@gmail.com'
 
         },
         {
-            id: 4,
+            id: '4',
             name: "Nadia Meddy",
             email: 'nadimeddy@gmail.com'
 
         },
         {
-            id: 5,
+            id: '5',
             name: "Josua Belix",
             email: 'joshbelix@gmail.com'
 
         },
         {
-            id: 6,
+            id: '6',
             name: "Nina Nickita",
             email: 'ninickita@gmail.com'
 
         },
         {
-            id: 7,
+            id: '7',
             name: "Emmy David",
             email: 'davemmy5@gmail.com'
 
@@ -69,7 +69,7 @@ const Clients = ({navigation}) => {
                >Save</Text>
            </Pressable>
            <Pressable style={styles.continueButton} 
-            onPress = {() => navigation.navigate("invoicesList")} >
+            onPress = {() => navigation.navigate("deliveryStatus")} >
                <Text style={styles.buttonText}
                >Continue</Text>
                <Icon 

@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "quize-app",
-    "slug": "quize-app",
+    "name": "copy-gen",
+    "slug": "copy-gen",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
