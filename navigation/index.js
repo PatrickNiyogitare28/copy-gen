@@ -17,11 +17,19 @@ function AppStack() {
   return (
     <Stack.Navigator>
 
+      
+
+      
       <Stack.Screen 
-       name="receipt"
-       component={OrderReceipt}
+        name="home" 
+        component={Onboard} 
+        options={{headerShown: false}}/>
+
+      <Stack.Screen 
+       name="configuration"
+       component={Configuration}
        options={{
-         title:'Order Receipt',
+         title:'Configure',
          headerStyle: {
           elevation: 0,
          },
@@ -37,16 +45,11 @@ function AppStack() {
         }
          }}/>
 
-      
-      <Stack.Screen 
-        name="home" 
-        component={Onboard} 
-        options={{headerShown: false}}/>
-      <Stack.Screen 
-       name="configuration"
-       component={Configuration}
+     <Stack.Screen 
+       name="receipt"
+       component={OrderReceipt}
        options={{
-         title:'Configure',
+         title:'Order Receipt',
          headerStyle: {
           elevation: 0,
          },

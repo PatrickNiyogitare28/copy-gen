@@ -59,7 +59,7 @@ const OrderReceipt = ({navigation}) => {
               </View>
               <View>
               <Text style={styles.barcode} >
-                <Barcode value="avalue to decode" format="CODE128" />;
+                <Barcode value="incodable values" format="CODE128" />;
                 </Text>
               </View>
             
@@ -158,7 +158,8 @@ const styles = StyleSheet.create({
 
   },
   barcode: {
-    width: '80%',
+    display:'flex',
+    width: '70%',
     justifyContent: 'space-around',
     alignItems:'center'
   },
